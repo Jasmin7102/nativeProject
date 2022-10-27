@@ -1,9 +1,32 @@
 import * as React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/container/Home';
 
+function Pay() {
+  return(
+    Alert.alert("You pressesd Pay")
+  );
+}
+
+function Shop() {
+  return(
+    Alert.alert("You pressesd Shop")
+  );
+}
+
+function Discover() {
+  return(
+    Alert.alert("You pressesd Discover")
+  );
+}
+
+function Help() {
+  return(
+    Alert.alert("You pressesd Help")
+  )
+}
 const Tab = createBottomTabNavigator();
 
 function App() {
@@ -25,17 +48,29 @@ function App() {
           ),
           tabBarLabel: 'manage',
           tabBarIcon: ({ }) => (
-            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
+            <Image style={style.home} source={{ uri: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/30455c9384889.57ee562a4fba0.jpg" }} />
           )
         }} />
-        <Tab.Screen name="pay" component={Home} options={{
+        <Tab.Screen name="pay" component={Pay} options={{
           tabBarLabel: 'pay',
           tabBarIcon: ({ }) => (
             <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/2342/2342096.png" }} />
           )}}/>
-        <Tab.Screen name="shop" component={Home} />
-        <Tab.Screen name="discover" component={Home}  />
-        <Tab.Screen name="help" component={Home}/>
+        <Tab.Screen name="shop" component={Shop} options={{
+          tabBarLabel: 'shop',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/128/2956/2956395.png" }} />
+          )}} />
+        <Tab.Screen name="discover" component={Discover} options={{
+          tabBarLabel: 'discover',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/5665/5665222.png" }} />
+          )}} />
+        <Tab.Screen name="help" component={Help} options={{
+          tabBarLabel: 'help',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/1246/1246332.png" }} />
+          )}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

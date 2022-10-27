@@ -35,7 +35,7 @@ export default class Home extends Component {
 
 
                     </View>
-                    <Shortcuts></Shortcuts>
+                    <Shortcuts ></Shortcuts>
                     <View style={style.line} />
                     <Service></Service>
                     <Ott></Ott>

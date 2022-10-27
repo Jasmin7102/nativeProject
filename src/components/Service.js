@@ -51,7 +51,7 @@ export default class Shortcuts extends Component {
                                     />
                                 </View>
                                 
-                                <Text style={styles.category}> {item.category} </Text>
+                                {item.category && <Text style={styles.category}> {item.category} </Text>}
                                 <View>
                                     <Text style={styles.title}>{item.title}</Text>
                                 </View>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         width: 360,
         height: 270,
-        marginBottom: 10,
+        marginBottom: 20,
     },
     serviceTxt: {
         margin: 20,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     },
     category: {
         backgroundColor: 'red',
-        fontSize: 8,
+        fontSize: 9,
         textAlign: 'center',
         borderWidth: 0,
         overflow: 'hidden',
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
         color: 'white',
         position: 'absolute',
         top: 0,
-        padding: 5,
+        
     }
 
 })
