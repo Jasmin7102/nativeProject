@@ -12,28 +12,36 @@ export default class Home extends Component {
                 <ScrollView>
                     <ServiceMoney></ServiceMoney>
                     <View style={style.banner}>
-                        <Text>
-                        <Image
-                            source={{ uri: "https://static.toiimg.com/thumb/msid-94699793,width-400,resizemode-4/94699793.jpg" }}
-                            style={style.iconOne}
-                        />
-                    
-                    
-            
-                        Check if your phone is 5G enabled
-                        <Image
-                            source={{ uri: "https://cdn-icons-png.flaticon.com/512/664/664866.png" }}
-                            style={style.iconOne}
-                        />
-                    </Text>
-                </View>
-                <Shortcuts></Shortcuts>
-                <View style={style.line} />
-                <Service></Service>
-                <Ott></Ott>
 
-            </ScrollView>
-            </SafeAreaView >
+                        <View style={style.bannerImg}>
+                            <Image
+                                source={{ uri: "https://static.toiimg.com/thumb/msid-94699793,width-400,resizemode-4/94699793.jpg" }}
+                                style={style.iconOne}
+                            />
+                        </View>
+                        
+                        <View>
+                        <Text style={style.bannerTxt}>
+                            Check if your phone is 5G enabled
+                        </Text>
+                        </View>
+                        
+                        <View style={style.bannerImg}>
+                            <Image
+                                source={{ uri: "https://cdn-icons-png.flaticon.com/512/664/664866.png" }}
+                                style={style.iconTwo}
+                            />
+                        </View>
+
+
+                    </View>
+                    <Shortcuts></Shortcuts>
+                    <View style={style.line} />
+                    <Service></Service>
+                    <Ott></Ott>
+
+                </ScrollView>
+            </SafeAreaView>
         );
     }
 }
@@ -55,13 +63,29 @@ const style = StyleSheet.create({
         marginBottom: 20,
     },
     iconOne: {
-        height: 13,
-        width: 40,
-        margin: 10,
+        height: 25,
+        width: 60,
     },
+    iconTwo: {
+        height: 20,
+        width: 20,
+    },
+
     banner: {
         backgroundColor: 'white',
         marginBottom: 20,
         borderRadius: 8,
+        padding: 2,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
+    bannerTxt: {
+        textAlign: 'center',
+        fontSize: 12,
+        padding: 10,
+    },
+    bannerImg: {
+        
+        justifyContent: 'space-around',
     }
 })
