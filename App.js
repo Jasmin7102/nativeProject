@@ -33,24 +33,9 @@ function App() {
           tabBarIcon: ({ }) => (
             <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/2342/2342096.png" }} />
           )}}/>
-        <Tab.Screen name="shop" component={Home} options={{
-          tabBarLabel: 'manage',
-          tabBarIcon: ({ }) => (
-            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
-          )
-        }}/>
-        <Tab.Screen name="discover" component={Home} options={{
-          tabBarLabel: 'manage',
-          tabBarIcon: ({ }) => (
-            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
-          )
-        }} />
-        <Tab.Screen name="help" component={Home} options={{
-          tabBarLabel: 'manage',
-          tabBarIcon: ({ }) => (
-            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
-          )
-        }}/>
+        <Tab.Screen name="shop" component={Home} />
+        <Tab.Screen name="discover" component={Home}  />
+        <Tab.Screen name="help" component={Home}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
