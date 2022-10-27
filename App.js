@@ -23,11 +23,34 @@ function App() {
               <Image style={style.bellIcon} source={{ uri: "https://cdn-icons-png.flaticon.com/512/246/246688.png" }} />
             </View>
           ),
+          tabBarLabel: 'manage',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
+          )
         }} />
-        <Tab.Screen name="pay" component={Home} />
-        <Tab.Screen name="shop" component={Home} />
-        <Tab.Screen name="discover" component={Home} />
-        <Tab.Screen name="help" component={Home} />
+        <Tab.Screen name="pay" component={Home} options={{
+          tabBarLabel: 'pay',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/2342/2342096.png" }} />
+          )}}/>
+        <Tab.Screen name="shop" component={Home} options={{
+          tabBarLabel: 'manage',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
+          )
+        }}/>
+        <Tab.Screen name="discover" component={Home} options={{
+          tabBarLabel: 'manage',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
+          )
+        }} />
+        <Tab.Screen name="help" component={Home} options={{
+          tabBarLabel: 'manage',
+          tabBarIcon: ({ }) => (
+            <Image style={style.home} source={{ uri: "https://cdn-icons-png.flaticon.com/512/34/34568.png" }} />
+          )
+        }}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -52,5 +75,10 @@ const style = StyleSheet.create({
     height: 8,
     width: 8,
     padding: 10,
-  }
+  },
+  home: {
+    width: 20,
+    height: 20,
+    fontSize: 10
+},
 });
