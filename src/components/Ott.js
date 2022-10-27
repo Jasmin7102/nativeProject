@@ -74,7 +74,7 @@ const style = StyleSheet.create({
     mainColumn: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        //margin: 10,
+        marginBottom: 10,
     },
     column: {
         backgroundColor: 'white',
